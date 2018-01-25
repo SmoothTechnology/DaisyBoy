@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.4.3">
+<eagle version="8.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -531,10 +531,10 @@ einem neuen Namen ab.</description>
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
+<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
-<param name="checkStop" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -662,7 +662,7 @@ einem neuen Namen ab.</description>
 <element name="C4" library="microbuilder" package="0603-MINI" value="10µF 25V" x="-1.27" y="-31.75"/>
 <element name="C12" library="microbuilder" package="0603-MINI" value="22uF 10V" x="6.35" y="-31.75"/>
 <element name="C13" library="microbuilder" package="0603-MINI" value="22uF 10V" x="-1.27" y="-34.29"/>
-<element name="L1" library="microbuilder" package="INDUCTOR_5X5MM_TDK_VLC5045" value="4.7uH" x="1.27" y="-16.51"/>
+<element name="L1" library="microbuilder" package="INDUCTOR_5X5MM_TDK_VLC5045" value="4.7uH" x="8.89" y="6.35"/>
 <element name="C14" library="microbuilder" package="0603-MINI" value="22nF" x="6.35" y="-34.29"/>
 <element name="D6" library="microbuilder" package="SOD-123" value="PMEG4030ER" x="-1.27" y="-27.94"/>
 <element name="D7" library="microbuilder" package="SOD-123" value="PMEG4030ER" x="5.08" y="-27.94"/>
@@ -848,8 +848,8 @@ einem neuen Namen ab.</description>
 <contactref element="C13" pad="1"/>
 <contactref element="U$19" pad="P5"/>
 <wire x1="5.6" y1="-31.75" x2="-2.02" y2="-34.29" width="0" layer="19" extent="1-1"/>
-<wire x1="2.87" y1="-16.51" x2="5.6" y2="-31.75" width="0" layer="19" extent="1-1"/>
-<wire x1="6.87" y1="-12.88" x2="2.87" y2="-16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="10.49" y1="6.35" x2="5.6" y2="-31.75" width="0" layer="19" extent="1-1"/>
+<wire x1="6.87" y1="-12.88" x2="10.49" y2="6.35" width="0" layer="19" extent="1-1"/>
 <wire x1="12.7" y1="12.7" x2="6.87" y2="-12.88" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$1">
@@ -880,8 +880,8 @@ einem neuen Namen ab.</description>
 <contactref element="U$19" pad="P16"/>
 <contactref element="U$19" pad="P13"/>
 <contactref element="D6" pad="C"/>
-<wire x1="-0.33" y1="-16.51" x2="-3.12" y2="-27.94" width="0" layer="19" extent="1-1"/>
-<wire x1="6.17" y1="-10.68" x2="-0.33" y2="-16.51" width="0" layer="19" extent="1-1"/>
+<wire x1="7.29" y1="6.35" x2="-3.12" y2="-27.94" width="0" layer="19" extent="1-1"/>
+<wire x1="6.17" y1="-10.68" x2="7.29" y2="6.35" width="0" layer="19" extent="1-1"/>
 <wire x1="6.87" y1="-9.98" x2="6.17" y2="-10.68" width="0" layer="19" extent="1-1"/>
 <wire x1="8.37" y1="-9.98" x2="6.87" y2="-9.98" width="0" layer="19" extent="1-1"/>
 <wire x1="9.07" y1="-10.68" x2="8.37" y2="-9.98" width="0" layer="19" extent="1-1"/>
@@ -892,7 +892,7 @@ einem neuen Namen ab.</description>
 </drawing>
 <compatibility>
 <note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
+Since Version 8.2, Eagle supports online libraries. The ids
 of those online libraries will not be understood (or retained)
 with this version.
 </note>
