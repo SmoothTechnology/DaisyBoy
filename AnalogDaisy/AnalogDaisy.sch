@@ -3597,12 +3597,16 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <part name="JP2" library="adafruit" deviceset="PINHD-1X14" device=""/>
 <part name="JP3" library="adafruit" deviceset="PINHD-1X3" device=""/>
 <part name="J15" library="My Connectors" deviceset="4PIN-JST/TE" device=""/>
-<part name="U$28" library="microbuilder" deviceset="VBAT" device=""/>
+<part name="VBAT" library="microbuilder" deviceset="VBAT" device=""/>
 <part name="U$29" library="microbuilder" deviceset="VBAT" device=""/>
 <part name="U$30" library="microbuilder" deviceset="VBAT" device=""/>
 <part name="U$31" library="microbuilder" deviceset="GND" device=""/>
 <part name="U$32" library="microbuilder" deviceset="GND" device=""/>
 <part name="U$33" library="microbuilder" deviceset="GND" device=""/>
+<part name="VBAT1" library="microbuilder" deviceset="VBAT" device=""/>
+<part name="VBAT2" library="microbuilder" deviceset="VBAT" device=""/>
+<part name="U$28" library="microbuilder" deviceset="GND" device=""/>
+<part name="U$34" library="microbuilder" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3681,7 +3685,7 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <instance part="J14" gate="G$1" x="45.72" y="208.28"/>
 <instance part="U$2" gate="G$1" x="0" y="172.72"/>
 <instance part="C4" gate="G$1" x="-22.86" y="175.26"/>
-<instance part="C8" gate="G$1" x="27.94" y="172.72"/>
+<instance part="C8" gate="G$1" x="27.94" y="170.18"/>
 <instance part="C9" gate="G$1" x="35.56" y="172.72"/>
 <instance part="L1" gate="G$1" x="20.32" y="177.8"/>
 <instance part="C10" gate="G$1" x="12.7" y="182.88" rot="R90"/>
@@ -3700,12 +3704,16 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <instance part="JP2" gate="A" x="-66.04" y="27.94"/>
 <instance part="JP3" gate="A" x="-88.9" y="73.66"/>
 <instance part="J15" gate="G$1" x="-96.52" y="58.42" rot="R270"/>
-<instance part="U$28" gate="G$1" x="10.16" y="220.98"/>
+<instance part="VBAT" gate="G$1" x="10.16" y="220.98"/>
 <instance part="U$29" gate="G$1" x="25.4" y="220.98"/>
 <instance part="U$30" gate="G$1" x="40.64" y="220.98"/>
 <instance part="U$31" gate="G$1" x="10.16" y="203.2"/>
 <instance part="U$32" gate="G$1" x="25.4" y="203.2"/>
 <instance part="U$33" gate="G$1" x="40.64" y="203.2"/>
+<instance part="VBAT1" gate="G$1" x="-20.32" y="226.06"/>
+<instance part="VBAT2" gate="G$1" x="-53.34" y="215.9"/>
+<instance part="U$28" gate="G$1" x="-20.32" y="203.2"/>
+<instance part="U$34" gate="G$1" x="-53.34" y="200.66"/>
 </instances>
 <busses>
 </busses>
@@ -3818,7 +3826,7 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <segment>
 <pinref part="C8" gate="G$1" pin="2"/>
 <pinref part="U$10" gate="G$1" pin="GND"/>
-<wire x1="27.94" y1="170.18" x2="27.94" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="167.64" x2="27.94" y2="165.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="D3" gate="G$1" pin="A"/>
@@ -3860,6 +3868,22 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <pinref part="U$33" gate="G$1" pin="GND"/>
 <pinref part="J14" gate="G$1" pin="2"/>
 <wire x1="40.64" y1="205.74" x2="40.64" y2="208.28" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="CN1" gate="G$1" pin="GND"/>
+<wire x1="-40.64" y1="205.74" x2="-53.34" y2="205.74" width="0.1524" layer="91"/>
+<pinref part="U$34" gate="G$1" pin="GND"/>
+<wire x1="-53.34" y1="205.74" x2="-53.34" y2="203.2" width="0.1524" layer="91"/>
+<pinref part="CN1" gate="G$1" pin="GNDBREAK"/>
+<wire x1="-40.64" y1="208.28" x2="-53.34" y2="208.28" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="208.28" x2="-53.34" y2="205.74" width="0.1524" layer="91"/>
+<junction x="-53.34" y="205.74"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="GND"/>
+<wire x1="-17.78" y1="208.28" x2="-20.32" y2="208.28" width="0.1524" layer="91"/>
+<pinref part="U$28" gate="G$1" pin="GND"/>
+<wire x1="-20.32" y1="208.28" x2="-20.32" y2="205.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EN1" class="0">
@@ -3998,7 +4022,7 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="-30.48" y1="180.34" x2="-30.48" y2="187.96" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$28" gate="G$1" pin="VBAT"/>
+<pinref part="VBAT" gate="G$1" pin="VBAT"/>
 <wire x1="10.16" y1="210.82" x2="10.16" y2="218.44" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -4008,6 +4032,18 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <segment>
 <pinref part="U$30" gate="G$1" pin="VBAT"/>
 <wire x1="40.64" y1="210.82" x2="40.64" y2="218.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="VBAT2" gate="G$1" pin="VBAT"/>
+<wire x1="-53.34" y1="213.36" x2="-53.34" y2="210.82" width="0.1524" layer="91"/>
+<pinref part="CN1" gate="G$1" pin="PWR"/>
+<wire x1="-53.34" y1="210.82" x2="-40.64" y2="210.82" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$1" pin="V+"/>
+<wire x1="-17.78" y1="218.44" x2="-20.32" y2="218.44" width="0.1524" layer="91"/>
+<pinref part="VBAT1" gate="G$1" pin="VBAT"/>
+<wire x1="-20.32" y1="218.44" x2="-20.32" y2="223.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="EN5" class="0">
@@ -4184,6 +4220,15 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <pinref part="MAX2" gate="MAX14853" pin="RE"/>
 <wire x1="99.06" y1="165.1" x2="83.82" y2="165.1" width="0.1524" layer="91"/>
 <label x="83.82" y="165.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="19/A5/T/SCL0"/>
+<wire x1="-25.4" y1="35.56" x2="-45.72" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="-45.72" y1="35.56" x2="-45.72" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="7"/>
+<wire x1="-45.72" y1="27.94" x2="-68.58" y2="27.94" width="0.1524" layer="91"/>
+<label x="-40.64" y="35.56" size="1.778" layer="95"/>
+<label x="-40.64" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="TD1" class="0">
@@ -4386,6 +4431,14 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="99.06" y1="167.64" x2="83.82" y2="167.64" width="0.1524" layer="91"/>
 <label x="83.82" y="167.64" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="18/A4/T/SDA0"/>
+<wire x1="-25.4" y1="38.1" x2="-48.26" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="-48.26" y1="38.1" x2="-48.26" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="A" pin="6"/>
+<wire x1="-48.26" y1="30.48" x2="-68.58" y2="30.48" width="0.1524" layer="91"/>
+<label x="-40.64" y="38.1" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$2" class="0">
 <segment>
@@ -4436,6 +4489,8 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <junction x="35.56" y="177.8"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
 <wire x1="48.26" y1="177.8" x2="48.26" y2="182.88" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="27.94" y1="175.26" x2="27.94" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="VIN"/>
@@ -4683,24 +4738,6 @@ Source: http://ecommas.tycoelectronics.com .. ENG_CD_640456_W.pdf</description>
 <wire x1="-50.8" y1="40.64" x2="-50.8" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="JP2" gate="A" pin="5"/>
 <wire x1="-50.8" y1="33.02" x2="-68.58" y2="33.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="18/A4/T/SDA0"/>
-<wire x1="-25.4" y1="38.1" x2="-48.26" y2="38.1" width="0.1524" layer="91"/>
-<wire x1="-48.26" y1="38.1" x2="-48.26" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="6"/>
-<wire x1="-48.26" y1="30.48" x2="-68.58" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="19/A5/T/SCL0"/>
-<wire x1="-25.4" y1="35.56" x2="-45.72" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="-45.72" y1="35.56" x2="-45.72" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="A" pin="7"/>
-<wire x1="-45.72" y1="27.94" x2="-68.58" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$18" class="0">
