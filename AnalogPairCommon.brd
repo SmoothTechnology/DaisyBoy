@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.5.2">
+<eagle version="8.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
-<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.25" altunitdist="mm" altunit="mm"/>
@@ -152,19 +151,16 @@
 <text x="2.54" y="82.55" size="1.778" layer="112">Direct</text>
 <text x="2.54" y="72.39" size="1.778" layer="112">Direct</text>
 <text x="2.54" y="62.23" size="1.778" layer="112">Direct</text>
-<text x="102.54" y="78.185" size="1.778" layer="25">Direct</text>
-<text x="107.54" y="58.025" size="1.778" layer="25">Direct</text>
-<text x="102.54" y="67.865" size="1.778" layer="25">Direct</text>
-<text x="93.295" y="79.3" size="1.778" layer="21" rot="R180">PWM1</text>
-<text x="93.295" y="69.14" size="1.778" layer="21" rot="R180">PWM2</text>
-<text x="93.295" y="58.98" size="1.778" layer="21" rot="R180">PWM3</text>
-<text x="93.295" y="48.82" size="1.778" layer="21" rot="R180">PWM4</text>
-<text x="93.295" y="38.66" size="1.778" layer="21" rot="R180">PWM5</text>
-<text x="88.73" y="27.705" size="1.778" layer="21">PWM6</text>
-<text x="88.73" y="17.545" size="1.778" layer="21">PWM7</text>
-<text x="88.73" y="7.385" size="1.778" layer="21">PWM8</text>
-<text x="88.73" y="-2.775" size="1.778" layer="21">PWM9</text>
-<text x="88.73" y="-12.935" size="1.778" layer="21">PWM10</text>
+<text x="50.295" y="52.3" size="1.778" layer="21" rot="R180">PWM1</text>
+<text x="50.295" y="47.14" size="1.778" layer="21" rot="R180">PWM2</text>
+<text x="50.295" y="40.98" size="1.778" layer="21" rot="R180">PWM3</text>
+<text x="50.295" y="36.82" size="1.778" layer="21" rot="R180">PWM4</text>
+<text x="50.295" y="30.66" size="1.778" layer="21" rot="R180">PWM5</text>
+<text x="43.73" y="24.705" size="1.778" layer="21">PWM6</text>
+<text x="43.73" y="19.545" size="1.778" layer="21">PWM7</text>
+<text x="43.73" y="15.385" size="1.778" layer="21">PWM8</text>
+<text x="43.73" y="10.225" size="1.778" layer="21">PWM9</text>
+<text x="42.73" y="4.065" size="1.778" layer="21">PWM10</text>
 <dimension x1="-2.54" y1="-6.985" x2="-2.54" y2="93.345" x3="-2.54" y3="43.18" textsize="1.778" layer="20" unit="inch"/>
 </plain>
 <libraries>
@@ -290,11 +286,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
-<library name="holes" urn="urn:adsk.eagle:library:237">
+<library name="holes">
 <description>&lt;b&gt;Mounting Holes and Pads&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
 <packages>
-<package name="3,3" library_version="1">
+<package name="3,3">
 <description>&lt;b&gt;MOUNTING HOLE&lt;/b&gt; 3.3 mm with drill center</description>
 <wire x1="-2.159" y1="0" x2="0" y2="-2.159" width="2.4892" layer="51" curve="90" cap="flat"/>
 <wire x1="0" y1="2.159" x2="2.159" y2="0" width="2.4892" layer="51" curve="-90" cap="flat"/>
@@ -477,11 +473,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
+<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
-<param name="checkStop" value="0"/>
-<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -613,10 +608,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <element name="Q10" library="SparkFun-DiscreteSemi" package="DPAK" value="35A/25V/8.5mΩ" x="36.795" y="4.255" rot="R270">
 <attribute name="PROD_ID" value="TRANS-09984" x="59.655" y="24.575" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U$11" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,3" value="" x="4.445" y="88.9"/>
-<element name="U$15" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,3" value="" x="56.515" y="88.9"/>
-<element name="U$16" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,3" value="" x="4.445" y="-2.54"/>
-<element name="U$19" library="holes" library_urn="urn:adsk.eagle:library:237" package="3,3" value="" x="56.515" y="-2.54"/>
+<element name="U$11" library="holes" package="3,3" value="" x="4.445" y="88.9"/>
+<element name="U$15" library="holes" package="3,3" value="" x="56.515" y="88.9"/>
+<element name="U$16" library="holes" package="3,3" value="" x="4.445" y="-2.54"/>
+<element name="U$19" library="holes" package="3,3" value="" x="56.515" y="-2.54"/>
 <element name="JP1" library="adafruit" package="1X03" value="" x="8.845" y="64.895" rot="R180"/>
 <element name="CN2" library="microbuilder" package="1X04_OVAL" value="" x="10.353" y="70.499"/>
 <element name="J1" library="5mm Terminal Block" package="691102710002" value="691102710002" x="55" y="78" rot="R270">
@@ -1006,11 +1001,4 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </signals>
 </board>
 </drawing>
-<compatibility>
-<note version="8.2" severity="warning">
-Since Version 8.2, EAGLE supports online libraries. The ids
-of those online libraries will not be understood (or retained)
-with this version.
-</note>
-</compatibility>
 </eagle>
